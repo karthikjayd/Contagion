@@ -13,6 +13,12 @@ state_colors = {0: '#7678ed', 1: '#bc4749', 2: '#76c893'}
 
 app_ui = ui.page_fluid(
     ui.h2("Contagion Spread Simulation"),
+    # add a description
+    ui.p("This app simulates the spread of contagion in a population of agents. "
+         "You can adjust parameters such as population size, infection radius, "
+         "infection probability, number of steps, (initial) immunized fraction, and random seed."),
+    # add a message
+    ui.p("NOTE: The initialization might take a few seconds, due to the LaTeX rendering of the plots."),
     ui.layout_columns(
         # First column: sliders
         ui.panel_well(
