@@ -4,6 +4,11 @@ import matplotlib.pyplot as plt
 import numpy as np
 from sim_code import run_simulation
 
+plt.rcParams['text.usetex'] = True
+plt.rcParams['font.family'] = 'serif'
+
+plt.style.use('ggplot')
+
 state_colors = {0: '#7678ed', 1: '#bc4749', 2: '#76c893'}
 
 app_ui = ui.page_fluid(
@@ -50,8 +55,8 @@ def server(input, output, session):
         ax.set_ylim(0, 50)
         ax.set_xlabel("x")
         ax.set_ylabel("y")
-        ax.legend()
-        ax.grid(True)
+        ax.legend(facecolor='white')
+        # ax.grid(True)
         return fig
 
     @output
