@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 from sim_code import run_simulation
 
-state_colors = {0: 'blue', 1: 'red', 2: 'green'}
+state_colors = {0: '#7678ed', 1: '#bc4749', 2: '#76c893'}
 
 app_ui = ui.page_fluid(
     ui.h2("Contagion Spread Simulation"),
