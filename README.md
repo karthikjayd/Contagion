@@ -59,6 +59,15 @@ The model incorporates realistic dynamics:
 
 5. Observe the live updates of agent states and infection trends.
 
+# Controls
+
+- **Population**: Number of agents (individuals) in the simulation.
+- **Infect Radius**: Distance within which an infected agent can transmit the contagion to others.
+- **Infect Prob**: Probability that a susceptible (healthy or immunized) agent becomes infected upon contact.
+- **Steps**: Total number of time steps (iterations) the simulation will run.
+- **Immunized %**: Fraction of the population initially immunized (vaccinated) at the start.
+- **Seed**: Random seed for reproducibility of simulation results.
+
 
 ## Ideas for Extension
 
