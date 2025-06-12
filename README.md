@@ -1,6 +1,8 @@
 # Contagion
 An interactive, agent-based simulation of contagion dynamics in a confined 2D space. It models how infectious diseases can spread in a population with varying degrees of vaccination (immunization) and explores how these parameters influence epidemic outcomes over time.
 
+A web app developed using Shiny, which allows users to visualize and interact with the contagion dynamics in real-time, is available at: [Contagion Simulation](https://void0369-contagion.share.connect.posit.cloud/)
+
 ## Overview
 
 Agents (representing individuals) move in a 50×50 nm² box and can be in one of three states:
