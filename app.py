@@ -8,14 +8,24 @@ state_colors = {0: 'blue', 1: 'red', 2: 'green'}
 
 app_ui = ui.page_fluid(
     ui.h2("Contagion Spread Simulation"),
-    ui.input_slider("population", "Population", 10, 500, 50, step=10),
-    ui.input_slider("infection_radius", "Infect Radius", 0.1, 5.0, 1.0, step=0.1),
-    ui.input_slider("infection_probability", "Infect Prob", 0.0, 1.0, 0.2, step=0.01),
-    ui.input_slider("steps", "Steps", 50, 2000, 200, step=10),
-    ui.input_slider("immunized_fraction", "Immunized %", 0.0, 0.9, 0.0, step=0.05),
-    ui.input_slider("seed", "Seed", 0, 10000, 0, step=1),
-    ui.output_plot("sim_plot", width="600px", height="600px"),
-    ui.output_plot("infected_plot", width="600px", height="300px"),
+    ui.layout_columns(
+        # First column: sliders
+        ui.panel_well(
+            ui.input_slider("population", "Population", 10, 500, 50, step=10),
+            ui.input_slider("infection_radius", "Infect Radius", 0.1, 5.0, 1.0, step=0.1),
+            ui.input_slider("infection_probability", "Infect Prob", 0.0, 1.0, 0.2, step=0.01),
+            ui.input_slider("steps", "Steps", 50, 2000, 200, step=10),
+            ui.input_slider("immunized_fraction", "Immunized %", 0.0, 0.9, 0.0, step=0.05),
+            ui.input_slider("seed", "Seed", 0, 10000, 0, step=1),
+            width=4
+        ),
+        # Second column: plots
+        ui.panel_well(
+            ui.output_plot("sim_plot", width="600px", height="600px"),
+            ui.output_plot("infected_plot", width="600px", height="300px"),
+            width=8
+        ),
+    )
 )
 
 def server(input, output, session):
